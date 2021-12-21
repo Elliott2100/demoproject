@@ -8,12 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 console.log('Server is Up')
 var app = express();
-mongoose.connect('',{useNewUrlParser: true, useUnifiedTopology : true})
-.then(()=>{
-  console.log('Connected to Database')
-}).catch(err =>{
-  console.log('No connected')
-})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
